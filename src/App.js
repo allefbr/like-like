@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle, Container, AppHeader, HeaderTitle, AddBtn } from './globalStyle'
+import Card from './components/Card'
+
+import { MdAdd } from "react-icons/md";
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <AppHeader>
+            <HeaderTitle>Posts</HeaderTitle>
+            <AddBtn>
+              <MdAdd /> Novo
+            </AddBtn>
+        </AppHeader>
+
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </Container>
+
     </div>
+    <GlobalStyle />
+    </>
   );
 }
 
 export default App;
+
