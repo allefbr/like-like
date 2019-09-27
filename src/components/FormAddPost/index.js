@@ -1,18 +1,22 @@
 import React from "react";
 
-import { Container } from "./styles";
+import { Container, RowInfos, RowActions, Avatar, BoxText } from "./styles";
+import Button from "../../styles/components/Button";
 
-export default function FormAddPost() {
-  // logica
-
+export default function FormAddPost({ handleClose }) {
   return (
     <Container>
-      <h1>Adicionar posts</h1>
+      <RowInfos>
+        <Avatar src="https://api.adorable.io/avatars/50/abott@adorable.png" />
+        <BoxText placeholder="O que você está pensando?" />
+      </RowInfos>
 
-      <form>
-        <textarea>Digite o que quiser</textarea>
-        <button>Adicionar</button>
-      </form>
+      <RowActions>
+        <Button onClick={handleClose} color="gray" filled>
+          Fechar
+        </Button>
+        <Button>Enviar</Button>
+      </RowActions>
     </Container>
   );
 }

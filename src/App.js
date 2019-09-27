@@ -1,40 +1,12 @@
 import React from "react";
-import {
-  GlobalStyle,
-  Container,
-  AppHeader,
-  HeaderTitle,
-  AddBtn
-} from "./globalStyle";
-import Card from "./components/Card";
+import Routes from "./routes";
 
-import { MdAdd } from "react-icons/md";
-import Modal from "./components/Modal";
-import FormAddPost from "./components/FormAddPost";
+import { GlobalStyle } from "./styles/global";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <Container>
-          <AppHeader>
-            <HeaderTitle>Posts</HeaderTitle>
-            <AddBtn>
-              <MdAdd /> Novo
-            </AddBtn>
-          </AppHeader>
-
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </Container>
-      </div>
-
-      <Modal>
-        <FormAddPost />
-      </Modal>
-
+      <Routes />
       <GlobalStyle />
     </>
   );

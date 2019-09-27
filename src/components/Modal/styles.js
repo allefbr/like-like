@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 450px;
-  padding: 30px;
   width: 100%;
   background-color: #fff;
   position: fixed;
@@ -28,8 +27,8 @@ export const ModalOverflow = styled.div`
 export const ButtonIcon = styled.button`
   width: auto;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 8px;
+  right: 8px;
   color: #333;
   border: 0;
   background: none;
